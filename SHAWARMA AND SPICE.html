@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawarma N' Spice | Amrapali, Thane West</title>
+    <meta name="description" content="Big flavours. Freshly made. A local shawarma counter in Amrapali, Thane West. Loaded wraps, crispy bites, and coolers worth coming back for.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:ital,wght@1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-cream: #FAF7F2;
+            --bg-cream-dark: #F2EDE4;
+            --text-dark: #1A1A1A;
+            --text-light: #4A4A4A; /* Slightly darkened for better contrast */
+            --accent-orange: #E85D26;
+            --accent-orange-hover: #D14F1D;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --border-radius: 16px; /* Softer cards */
+            --transition: 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .serif {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .text-orange {
+            color: var(--accent-orange);
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 6px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-orange-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--text-dark);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-dark);
+            color: var(--bg-cream);
+            transform: translateY(-2px);
+        }
+
+        .btn-black {
+            background-color: var(--text-dark);
+            color: #fff;
+        }
+
+        .btn-black:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 16px 0;
+            transition: var(--transition);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--text-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-text span:first-child {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .logo-text span:last-child {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 0.8rem;
+            color: var(--accent-orange);
+            letter-spacing: 0.1em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        nav a {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 80px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-tag {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .hero-tag::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-orange);
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 .serif {
+            font-size: 6rem;
+            display: block;
+            margin-top: -10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 480px;
+            margin-bottom: 40px;
+            margin-top: 24px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .hero-stats span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-stats .star {
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--accent-orange);
+            border-radius: var(--border-radius);
+            z-index: 1;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 30px;
+            left: -30px;
+            background-color: var(--text-dark);
+            color: #fff;
+            padding: 16px 24px;
+            z-index: 3;
+            border-radius: 6px;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .hero-badge span {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--accent-orange);
+            letter-spacing: 0.1em;
+        }
+
+        /* Marquee Banner */
+        .marquee-banner {
+            background-color: var(--text-dark);
+            color: #fff;
+            padding: 16px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+
+        .marquee-content span {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .marquee-content span::after {
+            content: '✦';
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Menu Section */
+        .menu-section {
+            background-color: var(--bg-cream);
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .menu-header-left h2 {
+            font-size: 3.5rem;
+            margin-bottom: 8px;
+        }
+
+        .menu-header-left h2 .serif {
+            display: block;
+            font-size: 4.5rem;
+            margin-top: -15px;
+        }
+
+        .menu-header-right {
+            max-width: 320px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Menu Controls */
+        .menu-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .menu-tabs {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .menu-tab {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            padding: 8px 0;
+            white-space: nowrap;
+        }
+
+        .menu-tab:hover, .menu-tab.active {
+            color: var(--accent-orange);
+        }
+
+        .menu-tab::after {
+            content: '↗';
+            font-size: 0.8rem;
+        }
+
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 16px 10px 40px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            background-color: #fff;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 3px rgba(232, 93, 38, 0.1);
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .menu-category {
+            background: #fff;
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: transform var(--transition);
+        }
+
+        .menu-category:hover {
+            transform: translateY(-2px);
+        }
+
+        .menu-category h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-orange);
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(232, 93, 38, 0.2);
+        }
+
+        .menu-items-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(0,0,0,0.08);
+            gap: 16px;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .menu-item-price {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            color: var(--accent-orange);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .menu-item-price span {
+            color: var(--text-light);
+            font-size: 0.75rem;
+            margin: 0 2px;
+        }
+
+        /* Show More/Less */
+        .show-more-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 16px;
+            padding: 8px;
+            background: none;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 6px;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .show-more-btn:hover {
+            background-color: var(--bg-cream-dark);
+            color: var(--accent-orange);
+            border-color: var(--accent-orange);
+        }
+
+        .show-more-btn.hidden {
+            display: none;
+        }
+
+        .hidden-item {
+            display: none !important;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #1A1A1A;
+            color: #fff;
+        }
+
+        .about-inner {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: var(--border-radius);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .about-image .badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: #fff;
+        }
+
+        .about-image .badge span {
+            display: block;
+            color: var(--accent-orange);
+            font-size: 0.7rem;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-tag {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: #aaa;
+            margin-bottom: 24px;
+        }
+
+        .about-tag::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-orange);
+        }
+
+        .about-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 8px;
+        }
+
+        .about-content h2 .serif {
+            display: block;
+            font-size: 4.5rem;
+            margin-top: -15px;
+            color: var(--accent-orange);
+        }
+
+        .about-content p {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            margin-top: 24px;
+        }
+
+        .about-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        .about-rating .star {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+
+        .about-rating span {
+            color: #aaa;
+        }
+
+        /* Location Section */
+        .location-section {
+            background-color: var(--bg-cream);
+        }
+
+        .location-inner {
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .location-content {
+            flex: 1;
+        }
+
+        .location-tag {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .location-tag::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-orange);
+        }
+
+        .location-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 8px;
+        }
+
+        .location-content h2 .serif {
+            display: block;
+            font-size: 4.5rem;
+            margin-top: -15px;
+        }
+
+        .location-content p {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 400px;
+            margin-bottom: 32px;
+            margin-top: 24px;
+        }
+
+        .location-card {
+            flex: 1;
+            background-color: var(--bg-cream-dark);
+            padding: 48px;
+            border-radius: var(--border-radius);
+        }
+
+        .location-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .location-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--accent-orange);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .location-card-header h3 {
+            font-size: 1.2rem;
+        }
+
+        .location-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .location-hours {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .location-hours .icon {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+
+        .location-hours div p:first-child {
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .location-hours div p:last-child {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo-text span:first-child {
+            color: #fff;
+        }
+
+        .footer-brand p {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            max-width: 250px;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .footer-nav a {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #aaa;
+            transition: var(--transition);
+        }
+
+        .footer-nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        .footer-bottom a {
+            color: #777;
+            transition: var(--transition);
+        }
+
+        .footer-bottom a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 4rem; }
+            .hero h1 .serif { font-size: 5rem; }
+            .menu-header-left h2 { font-size: 2.8rem; }
+            .menu-header-left h2 .serif { font-size: 3.8rem; }
+            .about-content h2 { font-size: 2.8rem; }
+            .about-content h2 .serif { font-size: 3.8rem; }
+            .location-content h2 { font-size: 2.8rem; }
+            .location-content h2 .serif { font-size: 3.8rem; }
+            .menu-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .header-inner .btn { display: none; }
+            
+            .hero {
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 0;
+            }
+            .hero h1 { font-size: 3rem; }
+            .hero h1 .serif { font-size: 3.8rem; }
+            .hero-buttons { flex-direction: column; }
+            .hero-image::after { display: none; }
+            .hero-badge { left: 10px; bottom: 10px; }
+            
+            .menu-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+            .menu-header-left h2 { font-size: 2.5rem; }
+            .menu-header-left h2 .serif { font-size: 3.2rem; }
+            
+            .about-inner { flex-direction: column; gap: 40px; }
+            .about-content h2 { font-size: 2.5rem; }
+            .about-content h2 .serif { font-size: 3.2rem; }
+            
+            .location-inner { flex-direction: column; gap: 40px; }
+            .location-content h2 { font-size: 2.5rem; }
+            .location-content h2 .serif { font-size: 3.2rem; }
+            .location-card { padding: 32px; }
+            
+            .footer-top { flex-direction: column; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            
+            .menu-grid { grid-template-columns: 1fr; }
+            .menu-controls { flex-direction: column; align-items: flex-start; }
+            .search-box { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero h1 .serif { font-size: 3rem; }
+            .hero-stats { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .about-content h2 { font-size: 2rem; }
+            .about-content h2 .serif { font-size: 2.8rem; }
+            .location-content h2 { font-size: 2rem; }
+            .location-content h2 .serif { font-size: 2.8rem; }
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(250, 247, 242, 0.98);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu-overlay nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .mobile-menu-overlay nav a {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+
+        .mobile-menu-overlay .close-btn {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">🌯</div>
+                <div class="logo-text">
+                    <span>SHAWARMA</span>
+                    <span>N' SPICE</span>
+                </div>
+            </a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#location">Location</a>
+            </nav>
+            <a href="#menu" class="btn btn-black">Explore Menu →</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <button class="close-btn" id="closeMenuBtn" aria-label="Close menu">✕</button>
+        <nav>
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#menu" class="mobile-nav-link">Menu</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#location" class="mobile-nav-link">Location</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero container" id="home">
+        <div class="hero-content">
+            <div class="hero-tag">THANE WEST · AMRAPALI</div>
+            <h1>Big flavours.<br><span class="serif text-orange">Freshly made.</span></h1>
+            <p>A local shawarma counter for loaded wraps, crispy bites and coolers worth coming back for.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Explore Our Menu ↘</a>
+                <a href="#location" class="btn btn-outline">Find Us 📍</a>
+            </div>
+            <div class="hero-stats">
+                <span><span class="star">★</span> 4.6 / 5</span>
+                <span>₹200–₹400 for two</span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="food.webp" alt="Shawarma wraps freshly made">
+            <div class="hero-badge">
+                SHAWARMA
+                <span>N' SPICE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-banner">
+        <div class="marquee-content">
+            <span>SHAWARMA</span>
+            <span>CRISPY BITES</span>
+            <span>COOLERS</span>
+            <span>FRESHLY MADE</span>
+            <span>SHAWARMA</span>
+            <span>CRISPY BITES</span>
+            <span>COOLERS</span>
+            <span>FRESHLY MADE</span>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <section class="menu-section container" id="menu">
+        <div class="menu-header">
+            <div class="menu-header-left">
+                <div class="hero-tag" style="margin-bottom: 16px;">THE MENU</div>
+                <h2>Pick your<br><span class="serif text-orange">kind of craving.</span></h2>
+            </div>
+            <div class="menu-header-right">
+                <p>The menu, prices and portions below are transcribed from the restaurant's supplied menu photographs.</p>
+            </div>
+        </div>
+
+        <div class="menu-controls">
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-target="non-veg">NON-VEG ↗</button>
+                <button class="menu-tab" data-target="veg">VEG ↗</button>
+                <button class="menu-tab" data-target="students">STUDENTS ↗</button>
+            </div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="menuSearch" placeholder="Search menu items..." aria-label="Search menu items">
+            </div>
+        </div>
+
+        <!-- Non-Veg Menu Content -->
+        <div class="menu-grid" id="non-veg">
+            <div class="menu-category">
+                <h3>NON-VEG FAVOURITES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Classic Chicken Shawarma</span><span class="menu-item-price">₹110 / <span>₹150</span> / ₹160</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Lebanese Chicken Shawarma</span><span class="menu-item-price">₹110 / <span>₹150</span> / ₹160</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Overload Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chilli Garlic Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Butter Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Tandoori Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">BBQ Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Peri Peri Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chipotle Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Flamin Hot Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Cheesyyy Chicken Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹195</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Hummus Chicken Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹195</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Spl. Fried Chicken Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹195</span></div>
+                </div>
+                <button class="show-more-btn" aria-label="Show more items">Show More ↓</button>
+            </div>
+            <div class="menu-category">
+                <h3>PLATTERS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Open Chicken Shawarma</span><span class="menu-item-price">₹140 / <span>₹185</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Hummus Platter</span><span class="menu-item-price">₹160 / <span>₹205</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Hummus with Pita Bread</span><span class="menu-item-price">₹200 / <span>₹240</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Overload Chicken Hummus Platter</span><span class="menu-item-price">₹195 / <span>₹230</span></span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>NON-VEG SALADS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Classic Open Chicken Salad</span><span class="menu-item-price">₹160</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Classic Mixed Chicken Salad</span><span class="menu-item-price">₹160</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chilli Garlic Chicken Salad</span><span class="menu-item-price">₹175</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Peri Peri Chicken Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chipotle Chicken Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Flamin Hot Chicken Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Hummus Chicken Salad</span><span class="menu-item-price">₹195</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Only Chicken Salad (150gms)</span><span class="menu-item-price">₹175</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>QUICK BITES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Chicken Shawarma Pav</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Vada Pav</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Cheese Vada Pav</span><span class="menu-item-price">₹100</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Seekh Kebab Pav</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Lucknowi Kebab Pav</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Shawarma Bhel</span><span class="menu-item-price">₹90</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>BRING YOUR OWN CHIPS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Bring Your Own Chip (S/M/L)</span><span class="menu-item-price">₹70 / <span>₹100</span> / ₹130</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Build Your Own Chips (S/M/L)</span><span class="menu-item-price">₹90 / <span>₹150</span> / ₹230</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Extra Toppings</span><span class="menu-item-price">₹40 / <span>₹60</span> / ₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Extra Sauces</span><span class="menu-item-price">₹20 / <span>₹30</span> / ₹40</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>NON-VEG FRIES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Garlic Mayo Fries</span><span class="menu-item-price">₹140 / <span>₹185</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Cheese Boom Fries</span><span class="menu-item-price">₹150 / <span>₹195</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Tandoori Fries</span><span class="menu-item-price">₹150 / <span>₹195</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Chilli Garlic Fries</span><span class="menu-item-price">₹150 / <span>₹195</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Peri Peri Fries</span><span class="menu-item-price">₹150 / <span>₹195</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Chipotle Fries</span><span class="menu-item-price">₹150 / <span>₹195</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken BBQ Fries</span><span class="menu-item-price">₹150 / <span>₹195</span></span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>NON-VEG SANDWICHES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Toast Sandwich</span><span class="menu-item-price">₹120</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Cheese Toast Sandwich</span><span class="menu-item-price">₹145</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Club Sandwich</span><span class="menu-item-price">₹150</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Junglelee Sandwich</span><span class="menu-item-price">₹130</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Butter Chicken Toast Sandwich</span><span class="menu-item-price">₹150</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Tandoori Chicken Toast Sandwich</span><span class="menu-item-price">₹130</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Hot & Spicy Toast Sandwich</span><span class="menu-item-price">₹140</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Hot & Spicy Cheese Toast Sandwich</span><span class="menu-item-price">₹165</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>FRIED CHICKEN</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Chicken Popcorn (8 Pcs)</span><span class="menu-item-price">₹140</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Popcorn (16 Pcs)</span><span class="menu-item-price">₹210</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Strips (5 Pcs)</span><span class="menu-item-price">₹175</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Tenders (2 Pcs)</span><span class="menu-item-price">₹130</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Leg Piece (1 Pc)</span><span class="menu-item-price">₹100</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Wings (4 Pcs)</span><span class="menu-item-price">₹150</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Fried Chicken Bucket Small (1 Leg Piece, 2 Wings, 4 Popcorns, 2 Strips, 2 Dips)</span><span class="menu-item-price">₹300</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Fried Chicken Bucket Big (2 Leg Pieces, 4 Wings, 8 Popcorns, 5 Strips, 1 Large Fries, 4 Dips)</span><span class="menu-item-price">₹700</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>NON-VEG MOMOS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Chicken Momos (Steam/Fried)</span><span class="menu-item-price">₹105 / <span>₹125</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Tikka Momos (Steam/Fried)</span><span class="menu-item-price">₹110 / <span>₹130</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Peri Peri Momos (Steam/Fried)</span><span class="menu-item-price">₹120 / <span>₹140</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Schezwan Momos (Steam/Fried)</span><span class="menu-item-price">₹120 / <span>₹140</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Cheese Peri Peri Momos (Steam/Fried)</span><span class="menu-item-price">₹125 / <span>₹145</span></span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>COOLERS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Mint Mojito</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Electric Blue Lagoon Mojito</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Strawberry Mojito</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Watermelon Mojito</span><span class="menu-item-price">₹80</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>THICK SHAKES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Oreo Thick Shake</span><span class="menu-item-price">₹120</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Kit Kat Thick Shake</span><span class="menu-item-price">₹120</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Cold Coffee Shake</span><span class="menu-item-price">₹120</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>ICE TEAS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Lemon Ice Tea</span><span class="menu-item-price">₹65</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Peach Ice Tea</span><span class="menu-item-price">₹65</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>DESSERTS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Caramel Custard</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Arabic Pudding</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Vanilla Ice Cream with Hot Gulab Jamun (1 pc)</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Vanilla Ice Cream with Hot Chocolate Sauce</span><span class="menu-item-price">₹55</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Gulab Jamun (1 pc)</span><span class="menu-item-price">₹19</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Malai Kulfi Slice</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Malai Kulfi with Hot Gulab Jamun (2 pcs)</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chocolate Sandwich</span><span class="menu-item-price">₹75</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Veg Menu Content (Hidden by default) -->
+        <div class="menu-grid" id="veg" style="display: none;">
+            <div class="menu-category">
+                <h3>VEG FAVOURITES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Malai Paneer Shawarma</span><span class="menu-item-price">₹120 / <span>₹160</span> / ₹160</span></div>
+                    <div class="menu-item"><span class="menu-item-name">BBQ Malai Paneer Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Flamin Hot Malai Paneer Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Peri Peri Paneer Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Tandoori Malai Paneer Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chilli Garlic Malai Paneer Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chipotle Malai Paneer Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Aloo Tikki Shawarma</span><span class="menu-item-price">₹110 / <span>₹150</span> / ₹175</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chilli Garlic Aloo Tikki Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Peri Peri Aloo Tikki Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Flamin Hot Aloo Tikki Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chipotle Aloo Tikki Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Falafel Shawarma</span><span class="menu-item-price">₹110 / <span>₹150</span> / ₹175</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Falafel Hummus Shawarma</span><span class="menu-item-price">₹150 / <span>₹185</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chilli Garlic Falafel Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Peri Peri Falafel Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Flamin Hot Falafel Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chipotle Falafel Shawarma</span><span class="menu-item-price">₹140 / <span>₹175</span> / ₹185</span></div>
+                </div>
+                <button class="show-more-btn" aria-label="Show more items">Show More ↓</button>
+            </div>
+            <div class="menu-category">
+                <h3>VEG PLATTERS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Hummus & Pita (2 pcs)</span><span class="menu-item-price">₹140 / <span>₹185</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Falafel Hummus Platter</span><span class="menu-item-price">₹150 / <span>₹195</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Paneer Shawarma Platter</span><span class="menu-item-price">₹160 / <span>₹205</span></span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG SALADS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Classic Malai Paneer Salad</span><span class="menu-item-price">₹160</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Aloo Tikki Salad</span><span class="menu-item-price">₹175</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Falafel Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chilli Garlic Malai Paneer Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Flamin Hot Malai Paneer Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Tandoori Malai Paneer Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Peri Peri Malai Paneer Salad</span><span class="menu-item-price">₹185</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Hummus Malai Paneer Salad</span><span class="menu-item-price">₹195</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Diet Malai Paneer Salad (150gms)</span><span class="menu-item-price">₹175</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>BRING YOUR OWN CHIPS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Bring Your Own Chip (S/M/L)</span><span class="menu-item-price">₹70 / <span>₹100</span> / ₹130</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Build Your Own Chips (S/M/L)</span><span class="menu-item-price">₹90 / <span>₹150</span> / ₹230</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Extra Toppings</span><span class="menu-item-price">₹40 / <span>₹60</span> / ₹80</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Extra Sauces</span><span class="menu-item-price">₹20 / <span>₹30</span> / ₹40</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG QUICK BITES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Malai Paneer Shawarma Pav</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Aloo Tikki Vada Pav</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Potato Wedges</span><span class="menu-item-price">₹80</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG MOMOS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Veg Momos (Steam/Fried)</span><span class="menu-item-price">₹85 / <span>₹105</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Veg Peri Peri Momos (Steam/Fried)</span><span class="menu-item-price">₹90 / <span>₹110</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Paneer Achari Momos (Steam/Fried)</span><span class="menu-item-price">₹100 / <span>₹120</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Paneer Peri Peri Momos (Steam/Fried)</span><span class="menu-item-price">₹100 / <span>₹120</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Pizza Momos (Steam/Fried)</span><span class="menu-item-price">₹105 / <span>₹125</span></span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG FRIES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Classic Salted Fries (Regular/Large)</span><span class="menu-item-price">₹85 / <span>₹110</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Cheese Boom Fries (Regular/Large)</span><span class="menu-item-price">₹110 / <span>₹130</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chilli Garlic Fries (Regular/Large)</span><span class="menu-item-price">₹100 / <span>₹120</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Tandoori Fries (Regular/Large)</span><span class="menu-item-price">₹100 / <span>₹120</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Peri Peri Fries (Regular/Large)</span><span class="menu-item-price">₹100 / <span>₹120</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chipotle Fries (Regular/Large)</span><span class="menu-item-price">₹100 / <span>₹120</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">BBQ Fries (Regular/Large)</span><span class="menu-item-price">₹100 / <span>₹120</span></span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG SANDWICHES</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Veg Sandwich</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Veg Toast Sandwich</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Veg Cheese Toast Sandwich</span><span class="menu-item-price">₹100</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Veg Melted Cheese Toast Sandwich</span><span class="menu-item-price">₹120</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Bombay Masala Toast Sandwich</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Bombay Masala Cheese Toast Sandwich</span><span class="menu-item-price">₹110</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Bombay Masala Melted Cheese Toast Sandwich</span><span class="menu-item-price">₹130</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Cheese Chilli Toast Sandwich</span><span class="menu-item-price">₹110</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Cheese Pull Sandwich</span><span class="menu-item-price">₹110</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Aloo Cheese Sandwich</span><span class="menu-item-price">₹80</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Aloo Cheese Toast Sandwich</span><span class="menu-item-price">₹90</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Malai Paneer Shawarma Toast Sandwich</span><span class="menu-item-price">₹110</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chutney Sandwich</span><span class="menu-item-price">₹35</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Chutney Toast Sandwich</span><span class="menu-item-price">₹40</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Bread Butter Jam Toast</span><span class="menu-item-price">₹40</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Bread Butter Toast</span><span class="menu-item-price">₹30</span></div>
+                    <div class="menu-item hidden-item"><span class="menu-item-name">Bread Butter</span><span class="menu-item-price">₹25</span></div>
+                </div>
+                <button class="show-more-btn" aria-label="Show more items">Show More ↓</button>
+            </div>
+            <div class="menu-category">
+                <h3>ADD ONS</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Malai Paneer</span><span class="menu-item-price">₹40</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Garlic Veg Mayo</span><span class="menu-item-price">₹20 / <span>₹40</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Cheese</span><span class="menu-item-price">₹20</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Pickle</span><span class="menu-item-price">₹20</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Any Dip</span><span class="menu-item-price">₹20 / <span>₹40</span></span></div>
+                    <div class="menu-item"><span class="menu-item-name">Hummus Dip</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Pita Bread 6"</span><span class="menu-item-price">₹20</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Pita Bread 8"</span><span class="menu-item-price">₹30</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Students Menu Content (Hidden by default) -->
+        <div class="menu-grid" id="students" style="display: none;">
+            <div class="menu-category">
+                <h3>NON VEG MENU (UNDER RS.100)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Chicken Shawarma 4"</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Shawarma Pav</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Popcorn (4 Pcs)</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Strips (2 Pcs)</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Shawarma Bhel</span><span class="menu-item-price">₹90</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>NON VEG FRIES (SMALL)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Garlic Mayo Fries</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Cheese Boom Fries</span><span class="menu-item-price">₹95</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Tandoori Fries</span><span class="menu-item-price">₹85</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Chilli Garlic Fries</span><span class="menu-item-price">₹85</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Peri Peri Fries</span><span class="menu-item-price">₹85</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken Chipotle Fries</span><span class="menu-item-price">₹85</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Shawarma Chicken BBQ Fries</span><span class="menu-item-price">₹85</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>NON VEG MOMOS (3 PCS)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Chicken Momos (Steam)</span><span class="menu-item-price">₹55</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Momos (Fried)</span><span class="menu-item-price">₹65</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Tikka Momos (Steam)</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Tikka Momos (Fried)</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Peri Peri Momos (Steam)</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Peri Peri Momos (Fried)</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Schezwan Momos (Steam)</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Schezwan Momos (Fried)</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Cheese Peri Peri Momos (Steam)</span><span class="menu-item-price">₹65</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chicken Cheese Peri Peri Momos (Fried)</span><span class="menu-item-price">₹75</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG MENU (UNDER RS.100)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Malai Paneer Shawarma 4"</span><span class="menu-item-price">₹70</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Aloo Tikki Vada Pav</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Potato Wedges</span><span class="menu-item-price">₹80</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG FRIES (SMALL)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Classic Salted Fries</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Cheese Boom Fries</span><span class="menu-item-price">₹85</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chilli Garlic Fries</span><span class="menu-item-price">₹75</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Tandoori Fries</span><span class="menu-item-price">₹75</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Peri Peri Fries</span><span class="menu-item-price">₹75</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Chipotle Fries</span><span class="menu-item-price">₹75</span></div>
+                    <div class="menu-item"><span class="menu-item-name">BBQ Fries</span><span class="menu-item-price">₹75</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>VEG MOMOS (3 PCS)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Veg Momos (Steam)</span><span class="menu-item-price">₹45</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Veg Momos (Fried)</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Veg Peri Peri Momos (Steam)</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Veg Peri Peri Momos (Fried)</span><span class="menu-item-price">₹55</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Paneer Achari Momos (Steam)</span><span class="menu-item-price">₹55</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Paneer Achari Momos (Fried)</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Paneer Peri Peri Momos (Steam)</span><span class="menu-item-price">₹55</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Paneer Peri Peri Momos (Fried)</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Pizza Momos (Steam)</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Pizza Momos (Fried)</span><span class="menu-item-price">₹65</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>BEVERAGES / COOLERS (MINI)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Masala Thums Up</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Masala Sprite</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Masala Coco Cola</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Masala Limca</span><span class="menu-item-price">₹50</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Mint Mojito</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Electric Blue Lagoon Mojito</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Strawberry Mojito</span><span class="menu-item-price">₹60</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Watermelon Mojito</span><span class="menu-item-price">₹60</span></div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>THICK SHAKES (MINI)</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item"><span class="menu-item-name">Oreo Thick Shake</span><span class="menu-item-price">₹85</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Kit Kat Thick Shake</span><span class="menu-item-price">₹85</span></div>
+                    <div class="menu-item"><span class="menu-item-name">Cold Coffee Shake</span><span class="menu-item-price">₹85</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container about-inner">
+            <div class="about-image">
+                <img src="location1.webp" alt="Shawarma N' Spice storefront">
+                <div class="badge">
+                    THE COUNTER
+                    <span>IN AMRAPALI</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-tag">WHY LOCALS DROP IN</div>
+                <h2>Good food,<br><span class="serif">no fuss.</span></h2>
+                <p>Shawarma N' Spice is a casual, family-friendly counter-service spot in Vasant Vihar, Thane West, with a wide menu spanning shawarmas, fried chicken, momos, fries, coolers and desserts.</p>
+                <p>Customer feedback highlights juicy, well-spiced shawarmas, generous fillings, crispy wings and refreshing drinks — all at a friendly neighbourhood price.</p>
+                <div class="about-rating">
+                    <span class="star">★</span>
+                    <span><strong>4.6</strong> average rating across local platforms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+        <div class="container location-inner">
+            <div class="location-content">
+                <div class="location-tag">COME FIND US</div>
+                <h2>Your next bite<br><span class="serif text-orange">is nearby.</span></h2>
+                <p>Drop by the Amrapali Arcade counter for a freshly made meal, a quick snack or something cool to sip.</p>
+                <a href="https://maps.google.com/?q=Shawarma+N+Spice+Amrapali+Arcade+Thane+West" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open in Google Maps →</a>
+            </div>
+            <div class="location-card">
+                <div class="location-card-header">
+                    <div class="location-icon">📍</div>
+                    <h3>Shawarma N' Spice</h3>
+                </div>
+                <p>Shop No. 5A, Ground Floor,<br>Amrapali Arcade, 2, Pokhran Rd,<br>Vasant Vihar, Thane West,<br>Thane, Maharashtra 400610</p>
+                <div class="location-hours">
+                    <div class="icon">🕒</div>
+                    <div>
+                        <p>Open daily</p>
+                        <p>12:30 PM – 11:30 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon" style="background-color: #fff; color: var(--accent-orange);">🌯</div>
+                        <div class="logo-text">
+                            <span style="color: #fff;">SHAWARMA</span>
+                            <span style="color: var(--accent-orange);">N' SPICE</span>
+                        </div>
+                    </a>
+                    <p>Big flavours. Freshly made.<br>Amrapali, Thane West.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#location">Location</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made for the neighbourhood.</p>
+                <p>&copy; 2025 Shawarma N' Spice</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const closeMenuBtn = document.getElementById('closeMenuBtn');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            const closeMenu = () => {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            closeMenuBtn.addEventListener('click', closeMenu);
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Menu Tabs & Search Functionality
+            const menuTabs = document.querySelectorAll('.menu-tab');
+            const menuGrids = document.querySelectorAll('.menu-grid');
+            const searchInput = document.getElementById('menuSearch');
+
+            // Show More/Less Functionality
+            const showMoreBtns = document.querySelectorAll('.show-more-btn');
+            showMoreBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.closest('.menu-category');
+                    const hiddenItems = category.querySelectorAll('.hidden-item');
+                    
+                    if (hiddenItems.length > 0) {
+                        const isHidden = hiddenItems[0].classList.contains('hidden-item');
+                        
+                        if (isHidden) {
+                            hiddenItems.forEach(item => {
+                                item.classList.remove('hidden-item');
+                            });
+                            btn.textContent = 'Show Less ↑';
+                        } else {
+                            hiddenItems.forEach(item => {
+                                item.classList.add('hidden-item');
+                            });
+                            btn.textContent = 'Show More ↓';
+                        }
+                    }
+                });
+            });
+
+            // Filter function for search
+            function filterMenu(query) {
+                const lowerQuery = query.toLowerCase().trim();
+                const activeGrid = document.querySelector('.menu-grid[style*="display: grid"]');
+                
+                if (!activeGrid) return;
+
+                if (!lowerQuery) {
+                    // Reset to default visibility
+                    activeGrid.querySelectorAll('.menu-item').forEach(item => {
+                        item.style.display = 'flex'; 
+                        // Restore hidden items if they were hidden by search but should be hidden by default
+                        if(item.dataset.defaultHidden === 'true') {
+                            item.classList.add('hidden-item');
+                        } else {
+                            item.classList.remove('hidden-item');
+                        }
+                    });
+                    activeGrid.querySelectorAll('.menu-category').forEach(cat => {
+                        cat.style.display = 'block';
+                    });
+                    activeGrid.querySelectorAll('.show-more-btn').forEach(btn => {
+                        btn.style.display = 'block';
+                        btn.textContent = 'Show More ↓';
+                    });
+                    return;
+                }
+
+                // Filtering logic
+                activeGrid.querySelectorAll('.menu-category').forEach(category => {
+                    let hasVisible = false;
+                    const items = category.querySelectorAll('.menu-item');
+                    
+                    items.forEach(item => {
+                        const name = item.querySelector('.menu-item-name').textContent.toLowerCase();
+                        if (name.includes(lowerQuery)) {
+                            item.style.display = 'flex';
+                            item.classList.remove('hidden-item');
+                            hasVisible = true;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    if (hasVisible) {
+                        category.style.display = 'block';
+                        const btn = category.querySelector('.show-more-btn');
+                        if(btn) btn.style.display = 'none'; // hide show more during search
+                    } else {
+                        category.style.display = 'none';
+                    }
+                });
+            }
+
+            // Setup Tab switching
+            menuTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    menuTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    menuGrids.forEach(grid => grid.style.display = 'none');
+                    
+                    const targetId = tab.getAttribute('data-target');
+                    const targetGrid = document.getElementById(targetId);
+                    if (targetGrid) {
+                        targetGrid.style.display = 'grid';
+                    }
+                    
+                    if (searchInput) {
+                        searchInput.value = '';
+                        filterMenu('');
+                    }
+                });
+            });
+
+            // Setup Search listener
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    filterMenu(e.target.value);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
